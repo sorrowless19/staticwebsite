@@ -1,0 +1,554 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(./fonts/HabelDemo.otf);
+ 
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+    vertical-align: baseline;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    padding: 0 2rem;
+line-height: 1;
+}
+input, select {
+vertical-align:middle;
+}
+
+
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+.bold {
+font-weight: bold;
+}
+.floatLeft {
+float: left;
+}
+.floatRight {
+float: right;
+}
+.clear {
+clear: both;
+}
+.containerMain {
+    height: 100vh;
+    position: relative;
+    background: url(/images/Main3.jpg) center no-repeat;
+    object-fit: cover;
+}
+
+.centeredText {
+display: flex;
+justify-content: center;
+align-items: center;
+height:90vh ;
+   
+}
+
+.overlay {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100vh;
+    width:100% ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.layer {
+    background: #b2aabf;
+}
+.layer-1{
+    height: 100%;
+    width: 100%;
+}
+.layer-2{
+    height: 100%;
+    width: 100%;
+}
+.layer-3 {
+    height: 100%;
+    width: 100%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    
+}
+.brand {
+    flex: 1;
+    display: flex;
+    list-style: none;
+}
+.brand img {
+    height: 3rem;
+}
+
+.nav-links {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li a {
+    display: block;
+    color: #fff;
+    padding: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.nav-links li a,
+.nav-links li a:after,
+.nav-links li a:before {
+  transition: all .5s;
+}
+.nav-links li a:hover {
+  color: #555;
+}
+.nav-links li a {
+    position:relative;
+    z-index: 1;
+  }
+  .nav-links li a:hover {
+    color: #91640F;
+  }
+  .nav-links li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #F1C40F;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  .nav-links li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
+  
+  
+
+.nav-links, .sm-links  {
+    display: flex;
+    list-style: none;
+}
+.sm-links li a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+.sm-links {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.btnText {
+    display: flex;
+    justify-content: center;
+}
+.PostionnedText h1 ,.PostionnedText h3  {
+    margin: 1rem;
+    color: #fafafa;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+.btncenter {
+    display: flex;
+    justify-content: center;
+    height: 30%;
+}
+button {
+    display: flex;
+    overflow: hidden;
+  background-color: #416dea;
+    margin: 10px;
+    padding: 20px 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: all .5s ease-in;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none !important;
+    text-transform: none;
+    text-transform: capitalize;
+    color: #fff;
+    border: 0 none;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.3;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 160px;
+}
+button:hover {
+    color: #202129;
+    background-color: #3aafa9;
+    opacity: 1;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+.about {
+    display: grid;
+    grid-template-columns: 49% 50% ;
+    column-gap: 1rem;
+    min-height: 30rem;
+}
+.aboutDesc {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.aboutDesc p {
+   text-align: justify;
+}
+.aboutImgsOne {
+    height: 100%;
+    width: 100%;
+}
+.imageOne {
+    height: 50%;
+    width: 100%;
+    margin-bottom: 1rem;
+    background: url(/images/bg2.jpg) center no-repeat;
+}
+.imageOne img {
+    height: 100%;
+    width: 100%;
+    background-image: cover;
+}
+.imageTwo {
+    height: 50%;
+    width: 100%;
+    background: url(/images/bg1.jpg) center no-repeat;
+}
+.imageTwo img {
+    height: 100%;
+    width: 100%;
+}
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    height: 40rem;
+    width: 80%;
+    margin: 0 auto;
+}
+.service {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    background: #fff none repeat scroll 0 0;
+box-shadow:0 2px 30px rgba(0, 0, 0, 0.1);
+margin-bottom: 30px;
+padding: 40px 40px;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.service h1 {
+    display: flex;
+    justify-content: center;
+}
+.service p {
+    display: flex;
+    align-items: center;
+}
+.service::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0b0861;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .service:hover, .service:focus, .service:active {
+    color: #fafafa;
+  }
+  .service:hover:before, .service:focus:before, .service:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  .testimonialDesc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:  #fafafa;
+  }
+
+  .testimonials {
+      height: 30rem;
+     
+  }
+  .testimonial {
+      height: 100%;
+      width: 100%;
+      position: relative;
+  }
+
+  .testimonial img {
+      
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .testimonial h1, .testimonial p {
+    margin-bottom: 1rem;
+  }
+  q {
+    quotes: "“" "”" "‘" "’";
+}
+
+/* insert the quotes using pseudo-elements and the `content` property */
+
+q:before {
+    content: open-quote;
+}
+
+q:after {
+    content: close-quote;
+}
+  .testimonialsBtn {
+      position: relative;
+      z-index: 2;
+  }
+  .categories {
+ display: flex;
+    width: 100%;
+    list-style: none;
+    margin-bottom: 1rem;
+
+    
+}
+.categories li {
+    
+    margin-left: 1rem;
+}
+.categories li a {
+    box-shadow:0 2px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+text-decoration: none;
+color: #111;
+margin: .5rem;
+font-size: 1.5rem;
+padding-left: 1rem;
+padding-right: 1rem;
+padding-top: 1rem;
+padding-bottom: 1rem;
+transition: background-color 1s ease-in;
+
+
+}
+.categories li a:hover {
+    background-color: #5dc8cd;
+}
+
+  .projects {
+      display: grid;
+      width: 80%;
+      margin: 0 auto;
+      height: 50rem;
+      grid-template-columns : 100% ;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      row-gap: 1rem;
+  }
+ 
+  .project {
+      display: grid;
+      grid-template-columns : 30% 70% ;
+      column-gap: 1rem;
+      box-shadow:0 2px 30px rgba(0, 0, 0, 0.1);
+  }
+  .projectimg {
+      height: 100%;
+      width: 100%;
+  }
+.projectimg img {
+    height: 100%;
+      width: 100%;
+}
+.projectDesc {
+    display: grid;
+    align-items: center;
+}
+.projectDesc h1 ,.projectDesc p {
+    margin-left: 2rem;
+}
+.ProjectButton {
+    display: flex;
+    justify-content: start;
+}
+  .container {
+      height: 35rem;
+      position: relative;
+      background: url(/images/contactbg.jpg) no-repeat;
+      object-fit: contain;
+  }
+.formcontainer {
+    border-radius: 2rem;
+width: 60%;
+   height: 70%;
+    background-color: #fafafa;
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+}
+  form {
+    margin: 0 auto;
+      height: 100%;
+      width: 12rem;
+      row-gap: .2rem;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: 10% 10% 10% 40% 30%;
+      
+  }
+.submitbtn {
+    display: flex;
+    justify-content: center;
+}
+  input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 30px;
+    font-size:14px;
+    border:0;
+    background: none;
+    border-bottom:1px solid #ccc;
+    outline:none;
+    border-radius: 0;
+    -webkit-appearance: none;
+resize: none;
+  }
+ textarea {
+     height: 10rem;
+     border: 1px solid #ccc;
+ }
+  input[type="submit"] {
+        border: 0;
+        background-color: #5dc8cd;
+        width: 8rem;
+        margin: 10px 20px 10px 0;
+        font-weight: 600;
+        text-align: center;
+        line-height: 50px;
+        color: #ffff;
+        border-radius:5px ;
+        text-transform: capitalize;
+        transition: all .5s ease-in;
+    
+  }
+  .singleinput {
+      display: flex;
+      flex-direction: column;
+  }
+
+  footer {
+background-color: #2a5298;
+height: 10rem;
+margin-top: 3rem;
+color: #fff;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+}
+.smlinks {
+    display: flex;
+    list-style: none;
+    
+}
+.footerNavlinks {
+    display: grid;
+    list-style: none;
+}
+.smlinks li a {
+    color: #fafafa;
+    margin: 1rem;
+}
+.footerNavlinks {
+    color: #fafafa;
+    margin: 1rem;
+}
+.singlefooteritem, .locationlinks {
+    display: grid;
+    justify-content: center;
+   
+    margin: 1rem;
+}
+.singlefooteritem li a {
+    color: #fafafa;
+    text-decoration: none;
+}
+.footerparagraph {
+    margin: 1rem;
+}
+.locationlinks {
+    display: grid;
+    list-style: none;
+}
+  /* Add a background color and some padding around the form */
